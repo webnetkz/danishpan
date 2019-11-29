@@ -1,6 +1,31 @@
 footer {
+    box-sizing: border-box;
     flex: 0 0 auto;
-    height: 2em;
-    width: 60%;
-    margin-left: 20%;
+    height: 200px;
+    background-image: url('../img/footer.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 70px;
+    font-weight: 600;
+}
+footer > div {
+    vertical-align: top;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 0.7em;
+}
+footer > div > h1,p {
+    padding: 3px;
+}
+.one {
+    width: 25%;
+}
+.two {
+    width: 45%;
+}
+.three {
+    width: 25%;
 }
