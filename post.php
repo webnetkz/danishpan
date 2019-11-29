@@ -27,12 +27,12 @@
                 Республиканский центр дистанционных конкурсов
             </h3>
             <menu>
-                <a href="index.php" class="menuItem active">
+                <a href="index.php" class="menuItem">
                     Негізгі бет
                     <hr class="active">
                     Главная
                 </a>
-                <a href="post.php" class="menuItem">
+                <a href="post.php" class="menuItem active">
                     Байқаулар
                     <hr>
                     Конкурсы

@@ -27,7 +27,7 @@
                 Республиканский центр дистанционных конкурсов
             </h3>
             <menu>
-                <a href="index.php" class="menuItem active">
+                <a href="index.php" class="menuItem">
                     Негізгі бет
                     <hr class="active">
                     Главная
@@ -37,7 +37,7 @@
                     <hr>
                     Конкурсы
                 </a>
-                <a href="archive.php" class="menuItem">
+                <a href="archive.php" class="menuItem active">
                     Мұрағат
                     <hr>
                     Архив
