@@ -1,5 +1,7 @@
 @import "header.css";
 @import "footer.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -9,6 +11,7 @@ body {
     font-family: sans-serif;
     height: 100%;
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 .wrapper {
 	display: flex;

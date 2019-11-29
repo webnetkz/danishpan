@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/slider.css">
     <link rel="stylesheet" href="public/css/headerPs.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
@@ -55,8 +56,25 @@
             </menu>
         </header>
         
+        <div id="slider-wrap">
+            <div id="active-slide">
+                <div id="slider">
+                    <div class="slide">
+                        <img src="public/img/slider/slide1.png">
+                    </div>
+                    <div class="slide">
+                        <img src="public/img/slider/slide2.png">
+                    </div>
+                    <div class="slide">
+                        <img src="public/img/slider/slide3.png">
+                    </div>
+                    <div class="slide">
+                        <img src="public/img/slider/slide4.png">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="content">
-            123
         </div>
 
         <footer>
@@ -79,5 +97,8 @@
         </footer>
 
     </div>
+
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/slider.js"></script>
 </body>
 </html>
