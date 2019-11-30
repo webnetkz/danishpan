@@ -50,6 +50,9 @@ body {
     text-align: center;
     padding-top: 7em;
 }
+.down > a > img {
+    transition-duration: 800ms;
+}
 .down > a > img:hover {
     box-shadow: 0 0 10px rgb(84,158,254);
     border-radius: 50px;
