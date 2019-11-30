@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/form.css">
     <link rel="stylesheet" href="public/css/headerPs.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
@@ -56,7 +56,11 @@
         </header>
         
         <div class="content">
-            123
+            <div class="down">
+                <a href="қатысушы өтінімі-заявка участника.docx">
+                    <img src="public/img/download.jpg">
+                </a>
+            </div>
         </div>
 
         <footer>
