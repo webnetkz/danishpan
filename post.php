@@ -60,6 +60,7 @@
             <h1 class="h1Cont">Байқаулар / Конкурсы</h1>
 
             <div class="cart">
+                <a href="1.php">
                 <div class="cartItem">
                     <div class="c">
                         <img src="public/img/post/1.png" class="imgPost">
@@ -75,6 +76,8 @@
                         <p class="date">10.11.2019 - 10.01.2020</p>
                     </div>
                 </div>
+                </a>
+                <a href="2.php">
                 <div class="cartItem">
                     <div class="c">
                         <img src="public/img/post/2.png" class="imgPost">
@@ -90,6 +93,8 @@
                         <p class="date">10.11.2019 - 10.01.2020</p>
                     </div>
                 </div>
+                </a>
+                <a href="3.php">
                 <div class="cartItem">
                     <div class="c">
                         <img src="public/img/post/3.png" class="imgPost">
@@ -105,6 +110,8 @@
                         <p class="date">10.11.2019 - 10.01.2020</p>
                     </div>
                 </div>
+                </a>
+                <a href="4.php">
                 <div class="cartItem">
                     <div class="c">
                         <img src="public/img/post/4.png" class="imgPost">
@@ -120,6 +127,7 @@
                         <p class="date">10.11.2019 - 10.01.2020</p>
                     </div>
                 </div>
+                </a>
             </div>
         </div>
 

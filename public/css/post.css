@@ -36,6 +36,10 @@ body {
     text-align: center;
     margin-bottom: 1em;
 }
+.h1Cont2 {
+    color: rgb(113,115,115);
+    text-align: left;
+}
 .Cont {
     color: rgb(255, 255, 255);
     text-align: center;
@@ -45,6 +49,13 @@ body {
     margin-top: 1em;
     color: rgb(73,148,213);
     box-sizing: border-box;
+}
+.coock2 {
+    display: inline;
+    color: rgb(73,148,213);
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: 300;
 }
 .cartItem {
     vertical-align: top;
@@ -68,6 +79,13 @@ body {
     width: 90%;
     margin-left: 5%;
 }
+.c2 {
+    box-sizing: border-box;
+	min-height: 30%;
+	padding-bottom: 20px;
+    width: 96%;
+    margin-left: 2%;
+}
 .imgPost {
     width: 100%;
     margin-top: 10px;
@@ -81,10 +99,15 @@ body {
 }
 .minip {
     font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.9);
 }
 .f {
     height: 20px;
 	margin-top: -50px;
+}
+.f2 {
+    width: 80%;
+    margin-left: 10%;
 }
 .h {
     border: 1px solid rgb(124,161,230);
@@ -97,4 +120,71 @@ body {
     font-size: 0.8em;
     font-weight: 600;
     padding: 15px;
+}
+.eye {
+    float: right;
+    background-color: rgb(1,173,239);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+.eye > img {
+    display: inline-block;
+    margin-right: 10px;
+}
+.eye > p {
+    display: inline;
+    float: right;
+}
+.allText {
+    padding-top: 10em;
+}
+.big {
+    border: 5px solid rgb(68,144,198);
+    margin: 1em auto;
+}
+.imgPost2 {
+    width: 100%;
+    margin-top: 10px;
+    transition-duration: 1s;
+}
+.minipB {
+    font-weight: 700;
+    font-size: 0.8em;
+}
+.miniName {
+    font-size: 0.8em;
+    margin-bottom: 1em;
+}
+.cartItem2 {
+    vertical-align: top;
+    display: inline-block;
+    width: 30%;
+    border: 1px solid rgb(124,161,230);
+    box-shadow: 0 0 10px rgb(124,161,230);
+    margin-left: 2.5%;
+    margin-bottom: 1.5em;
+    background-color: rgb(246,248,253);
+    height: 400px;
+}
+.cart2 {
+    margin-top: 2em;
+}
+
+
+
+
+
+.imgPost2:focus {
+    -webkit-transform: scale(2.5);
+    -moz-transform:  scale(2.5); 
+    -o-transform:  scale(2.5); 
+    -ms-transform:  scale(2.5);
+    transform: scale(2.5);
+}
+.imgPost2:hover {
+    -webkit-transform: scale(2.5);
+    -moz-transform:  scale(2.5); 
+    -o-transform:  scale(2.5); 
+    -ms-transform:  scale(2.5);
+    transform: scale(2.5);
 }
