@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/post.css">
     <link rel="stylesheet" href="public/css/headerPs.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
@@ -56,7 +56,71 @@
         </header>
         
         <div class="content">
-            123
+            <h4 class="coock">Байқаулар / Конкурсы</h4>
+            <h1 class="h1Cont">Байқаулар / Конкурсы</h1>
+
+            <div class="cart">
+                <div class="cartItem">
+                    <div class="c">
+                        <img src="public/img/post/1.png" class="imgPost">
+                        <h4 class="mini">«Жануарлар әлемінде»</h4>
+                        <h4 class="mini">«В мире животных»</h4>
+                        <p class="minip">«Жануарлар әлемінде» атты шығармашылық қашықтық байқауына (сурет,
+                        өлең, шығарма, аппликация, қолдан жасалған бұйым) жұмыстары қабылданады.
+                        Қолөнер жұмыстарын әр түрлі техникада және материалдардан жасауға
+                        болады.</p>
+                    </div>
+                    <div class="f">
+                        <hr class="h">
+                        <p class="date">10.11.2019 - 10.01.2020</p>
+                    </div>
+                </div>
+                <div class="cartItem">
+                    <div class="c">
+                        <img src="public/img/post/2.png" class="imgPost">
+                        <h4 class="mini">«Жаңа жыл - ғажайып мереке!»</h4>
+                        <h4 class="mini">«Новый год - волшебный праздник!»</h4>
+                        <p class="minip">«Жануарлар әлемінде» атты шығармашылық қашықтық байқауына (сурет,
+                        өлең, шығарма, аппликация, қолдан жасалған бұйым) жұмыстары қабылданады.
+                        Қолөнер жұмыстарын әр түрлі техникада және материалдардан жасауға
+                        болады.</p>
+                    </div>
+                    <div class="f">
+                        <hr class="h">
+                        <p class="date">10.11.2019 - 10.01.2020</p>
+                    </div>
+                </div>
+                <div class="cartItem">
+                    <div class="c">
+                        <img src="public/img/post/3.png" class="imgPost">
+                        <h4 class="mini">«Қыс қызығы»</h4>
+                        <h4 class="mini">«Зимние забавы»</h4>
+                        <p class="minip">«Жануарлар әлемінде» атты шығармашылық қашықтық байқауына (сурет,
+                        өлең, шығарма, аппликация, қолдан жасалған бұйым) жұмыстары қабылданады.
+                        Қолөнер жұмыстарын әр түрлі техникада және материалдардан жасауға
+                        болады.</p>
+                    </div>
+                    <div class="f">
+                        <hr class="h">
+                        <p class="date">10.11.2019 - 10.01.2020</p>
+                    </div>
+                </div>
+                <div class="cartItem">
+                    <div class="c">
+                        <img src="public/img/post/4.png" class="imgPost">
+                        <h4 class="mini">«Спорт - денсаулық кепілі»</h4>
+                        <h4 class="mini">«Спорт - это здорово!»</h4>
+                        <p class="minip">«Жануарлар әлемінде» атты шығармашылық қашықтық байқауына (сурет,
+                        өлең, шығарма, аппликация, қолдан жасалған бұйым) жұмыстары қабылданады.
+                        Қолөнер жұмыстарын әр түрлі техникада және материалдардан жасауға
+                        болады.</p>
+                    </div>
+                    <div class="f">
+                        <hr class="h">
+                        <p class="date">10.11.2019 - 10.01.2020</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer>

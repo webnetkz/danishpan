@@ -23,4 +23,52 @@ body {
     width: 60%;
     margin-left: 20%;
 }
+.about {
+    padding: 4em;
+    width: 80%;
+    border: 1px solid rgb(82,153,203);
+    box-shadow: 0 0 30px rgb(82,153,203);
+    margin: 6em auto;
+    border-radius: 50px;
+}
+.h1Cont {
+    color: rgb(113,115,115);
+    text-align: center;
+    margin-bottom: 1em;
+}
+.Cont {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 10px;
+}
+h2.Cont {
+    margin-bottom: 2em;
+}
+.nomin {
+    background-image: url('../img/footer.png');
+    background-size: cover;
+    height: 400px;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 2em;
+}
+.workItem {
+    display: inline-block;
+    height: 150px;
+    margin: 1px auto;
+    width: 24.5%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.workItem > img {
+    height: 130px;
+}
+.workItem > p {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+
 

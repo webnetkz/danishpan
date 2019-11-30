@@ -1,0 +1,96 @@
+@import "header.css";
+@import "footer.css";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+    font-family: sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+    flex: 1 0 auto;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 16em;
+}
+.about {
+    padding: 4em;
+    width: 80%;
+    border: 1px solid rgb(82,153,203);
+    box-shadow: 0 0 30px rgb(82,153,203);
+    margin: 6em auto;
+    border-radius: 50px;
+}
+.h1Cont {
+    color: rgb(113,115,115);
+    text-align: center;
+    margin-bottom: 1em;
+}
+.Cont {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 10px;
+}
+.coock {
+    margin-top: 1em;
+    color: rgb(73,148,213);
+    box-sizing: border-box;
+}
+.cartItem {
+    vertical-align: top;
+    display: inline-block;
+    width: 30%;
+    border: 1px solid rgb(124,161,230);
+    box-shadow: 0 0 10px rgb(124,161,230);
+    margin-left: 2.5%;
+    margin-bottom: 1.5em;
+    background-color: rgb(246,248,253);
+    height: 440px;
+}
+.c {
+    box-sizing: border-box;
+	min-height: 100%;
+	padding-bottom: 20px;
+    width: 90%;
+    margin-left: 5%;
+}
+.imgPost {
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.mini {
+    color: rgb(113,115,115);
+    text-align: center;
+    margin: 3px;
+    font-size: 0.9em;
+}
+.minip {
+    font-size: 0.8em;
+}
+.f {
+    height: 20px;
+	margin-top: -50px;
+}
+.h {
+    border: 1px solid rgb(124,161,230);
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+.date {
+    color: rgb(53,111,217);
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 15px;
+}
