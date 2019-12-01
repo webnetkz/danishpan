@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="public/css/post.css">
     <link rel="stylesheet" href="public/css/headerPs.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://vladmaxi.net/favicon.ico" type="image/x-icon">
 
     <title>Danishpan</title>
 </head>

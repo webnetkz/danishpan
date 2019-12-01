@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/slider.css">
     <link rel="stylesheet" href="public/css/headerPs.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://vladmaxi.net/favicon.ico" type="image/x-icon">
 
     <title>Danishpan</title>
 
@@ -84,7 +84,8 @@
 
     .slider__item>div {
       line-height: 250px;
-      font-size: 100px;
+      width: 90%;
+      margin-left: 5%;
       text-align: center;
     }
     p.name {
@@ -102,11 +103,24 @@
         font-weight: 700;
         color: rgb(161,161,161);
     }
+    .sign {
+      color: rgb(255, 255, 255);
+      position: fixed;
+      top: 1%;
+      left: 93%;
+      padding: 7px;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 30px;
+      text-decoration: none;
+      z-index: 888888;
+    }
     </style>
 </head>
 <body>
     <div class="wrapper">
-
+        <a href="admin.php" class="sign">
+            Войти
+        </a>
         <header>
             <h1>
                 DANISHPAN.KZ
