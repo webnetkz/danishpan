@@ -1,3 +1,14 @@
+<?php
+
+  if(!empty($_POST['login']) && !empty($_POST['pass'])) {
+      if(($_POST['login'] == 'admin') && ($_POST['pass'] == 'danishpan!!')) {
+          session_start();
+          $_SESSION['active'] = 'active';
+          header('Location: panel.php');
+      }
+  }
+
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->

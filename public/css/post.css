@@ -164,10 +164,13 @@ body {
     margin-left: 2.5%;
     margin-bottom: 1.5em;
     background-color: rgb(246,248,253);
-    height: 400px;
+    height: 430px;
 }
 .cart2 {
     margin-top: 2em;
+}
+nav {
+    display: none;
 }
 
 
