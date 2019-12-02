@@ -353,53 +353,32 @@ nav {
             <h4 class="coock">Мұрағат / Архив</h4>
             <h1 class="h1Cont">Мұрағат / Архив</h1>
 
-            <div class="cart">
-                <div class="cartItem">
-                    <div class="c">
-                        <img src="public/img/post/1.png" class="imgPost">
-                        <h4 class="mini">«Жануарлар әлемінде»</h4>
-                        <h4 class="mini">«В мире животных»</h4>
-                        <p class="minip">«Жануарлар әлемінде» атты шығармашылық қашықтық байқауына (сурет,
-                        өлең, шығарма, аппликация, қолдан жасалған бұйым) жұмыстары қабылданады.
-                        Қолөнер жұмыстарын әр түрлі техникада және материалдардан жасауға
-                        болады.</p>
-                    </div>
-                    <div class="f">
-                        <hr class="h">
-                        <p class="date">10.11.2019 - 10.01.2020</p>
-                    </div>
-                </div>
-                <div class="cartItem">
-                    <div class="c">
-                        <img src="public/img/post/2.png" class="imgPost">
-                        <h4 class="mini">«Жаңа жыл - ғажайып мереке!»</h4>
-                        <h4 class="mini">«Новый год - волшебный праздник!»</h4>
-                        <p class="minip">«Жануарлар әлемінде» атты шығармашылық қашықтық байқауына (сурет,
-                        өлең, шығарма, аппликация, қолдан жасалған бұйым) жұмыстары қабылданады.
-                        Қолөнер жұмыстарын әр түрлі техникада және материалдардан жасауға
-                        болады.</p>
-                    </div>
-                    <div class="f">
-                        <hr class="h">
-                        <p class="date">10.11.2019 - 10.01.2020</p>
-                    </div>
-                </div>
-                <div class="cartItem">
-                    <div class="c">
-                        <img src="public/img/post/3.png" class="imgPost">
-                        <h4 class="mini">«Қыс қызығы»</h4>
-                        <h4 class="mini">«Зимние забавы»</h4>
-                        <p class="minip">«Жануарлар әлемінде» атты шығармашылық қашықтық байқауына (сурет,
-                        өлең, шығарма, аппликация, қолдан жасалған бұйым) жұмыстары қабылданады.
-                        Қолөнер жұмыстарын әр түрлі техникада және материалдардан жасауға
-                        болады.</p>
-                    </div>
-                    <div class="f">
-                        <hr class="h">
-                        <p class="date">10.11.2019 - 10.01.2020</p>
-                    </div>
-                </div>
-            </div>
+            
+            <?php
+                require_once 'app/pdo/connect.php';
+
+                $sql = "SELECT * FROM `archive`";
+                $res = $pdo->query($sql);
+                $res = $res->fetchAll(PDO::FETCH_ASSOC);
+
+                foreach($res as $k => $v) {
+
+                    echo '<a href="'.$v['id'].'.php">';
+                        echo '<div class="cartItem">';
+                            echo '<div class="c">';
+                                echo '<img src="'.$v['src'].'" class="imgPost" style="width: 100%;">';
+                                echo '<h4 class="mini">'.$v['kaz'].'</h4>';
+                                echo '<h4 class="mini">'.$v['ru'].'</h4>';
+                                echo '<p class="minip">'.$v['text'].'</p>';
+                            echo '</div>';
+                            echo '<div class="f">';
+                                echo '<hr class="h">';
+                                echo '<p class="date">'.$v['date']. ' - ' .$v['date1'].'</p>';
+                            echo '</div>';
+                        echo '</div>';
+                    echo '</a>';
+                }
+            ?>
         </div>
 
         <footer>

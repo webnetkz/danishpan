@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,15 +11,16 @@
     <link rel="stylesheet" href="public/css/post.css">
     <link rel="stylesheet" href="public/css/headerPs.css">
     <link rel="icon" href="http://vladmaxi.net/favicon.ico" type="image/x-icon">
-    <style>
-    @media only screen and (max-width: 500px) {
-        .cartItem2 {
+    <style>@media only screen and (max-width: 500px) {
+  
+  .cartItem2 {
       width: 94%;
   }
   .allText {
       width: 94%;
   }
-        .sign {
+  
+  .sign {
     display: none;
   }
 
@@ -279,7 +283,7 @@ nav {
 }
 
 }</style>
-    <title>Danishpan</title>
+    <title><?php echo $_SESSION['kaz']?></title>
 </head>
 <body>
 <nav class="dws-menu">
@@ -352,10 +356,11 @@ nav {
             </menu>
         </header>
         
+
         <div class="content">
-            <h4 class="coock">Байқаулар / Конкурсы <p class="coock2"> - «Спорт - денсаулық кепілі» / «Спорт - это здорово!»</p></h4>
+            <h4 class="coock">Байқаулар / Конкурсы <p class="coock2"> - <?php echo $_SESSION['kaz'].' / '.$_SESSION['ru']?></p></h4>
                 <br><br><br><br>
-            <h1 class="h1Cont">«Спорт - денсаулық кепілі» / «Спорт - это здорово!»</h1>
+            <h1 class="h1Cont"><?php echo $_SESSION['kaz'].' / '.$_SESSION['ru']?></h1>
             
             <a href="#ww">
             <div class="eye">
@@ -369,9 +374,7 @@ nav {
             </a>
 
             <div class="allText">
-            <P STYLE="margin-bottom: 0in; background: #ffffff"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="kk-KZ">«</SPAN></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="kk-KZ"><B>Спорт
-&shy;</B></SPAN></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="kk-KZ">-</SPAN></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="kk-KZ"><B>
-денсаулық кепілі</B></SPAN></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="kk-KZ">»
+            <P STYLE="margin-bottom: 0in; background: #ffffff"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="kk-KZ">«</SPAN></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="kk-KZ"><B><?php echo $_SESSION['kaz']?></B></SPAN></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="kk-KZ">»
 атты шығармашылық қашықтық байқауына
 </SPAN></FONT></FONT></FONT><SPAN STYLE="font-variant: small-caps"><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="kk-KZ"><SPAN STYLE="font-weight: normal">(</SPAN></SPAN></FONT></FONT></FONT></SPAN><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="kk-KZ"><SPAN STYLE="background: #ffffff">сурет</SPAN></SPAN></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="kk-KZ"><SPAN STYLE="background: #ffffff">,
 </SPAN></SPAN></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="kk-KZ"><SPAN STYLE="background: #ffffff">өлең</SPAN></SPAN></FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="kk-KZ"><SPAN STYLE="background: #ffffff">,
@@ -386,12 +389,13 @@ nav {
 және материалдардан жасауға болады.</SPAN></FONT></FONT></FONT></FONT></FONT></P>
 <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ"><B>Қатысушылар
 категориясы:</B></SPAN></FONT><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ">
-3-17 жасқа дейін</SPAN></FONT></P>
-<P STYLE="margin-bottom: 0in; line-height: 100%"><BR>
+<?php echo $_SESSION['old']?> жасқа дейін</SPAN></FONT></P>
+<P STYLE="margin-bottom: 0in; line-height: 100%"><A NAME="_GoBack"></A>
+<BR>
 </P>
 <P STYLE="margin-bottom: 0in; line-height: 100%"><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ"><B>Өткізу
 мерзімі:&nbsp;</B></SPAN></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ">
-10.11.2019 ж. бастап 10.01.2020 ж. дейін</SPAN></FONT></FONT></P>
+<?php echo $_SESSION['date']?> ж. бастап <?php echo $_SESSION['date1']?> ж. дейін</SPAN></FONT></FONT></P>
 <P LANG="kk-KZ" STYLE="margin-bottom: 0in; background: #ffffff; line-height: 100%">
 <BR>
 </P>
@@ -545,8 +549,7 @@ HSBKKZKX</SPAN></FONT></FONT></P>
 <P LANG="kk-KZ" STYLE="margin-right: -0.02in; margin-bottom: 0.14in"><BR><BR>
 </P>
 <P STYLE="margin-right: -0.02in; margin-bottom: 0.14in"><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ">На
-дистанционный творческий конкурс </SPAN></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif">«</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><B><SPAN STYLE="background: #ffffff">Спорт
-- это здорово!</SPAN></B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif">»</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ">
+дистанционный творческий конкурс </SPAN></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif">«</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ"><B><SPAN STYLE="background: #ffffff"><?php echo $_SESSION['ru']?></SPAN></B></SPAN></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif">»</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ">
 принимаются работы такие как </SPAN></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif">(</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN STYLE="background: #ffffff">рисунок,
 стихотворение, сочинение, аппликация,
 поделка</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif">)
@@ -555,16 +558,15 @@ HSBKKZKX</SPAN></FONT></FONT></P>
 </SPAN></SPAN></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN STYLE="background: #ffffff">может</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ"><SPAN STYLE="background: #ffffff">
 быть изготовлена из самых различных
 материалов</SPAN></SPAN></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN STYLE="background: #ffffff">.</SPAN></FONT></FONT></P>
-<P STYLE="margin-right: -0.02in; margin-bottom: 0.14in"><A NAME="_GoBack"></A>
-<FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ"><B><SPAN STYLE="background: #ffffff">Категория
+<P STYLE="margin-right: -0.02in; margin-bottom: 0.14in"><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ"><B><SPAN STYLE="background: #ffffff">Категория
 участников</SPAN></B></SPAN></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><B><SPAN STYLE="background: #ffffff">:</SPAN></B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN STYLE="background: #ffffff">
-3-17</SPAN></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ"><SPAN STYLE="background: #ffffff">
+<?php echo $_SESSION['old']?></SPAN></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ"><SPAN STYLE="background: #ffffff">
 лет </SPAN></SPAN></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN STYLE="background: #ffffff">
 </SPAN></FONT></FONT>
 </P>
 <P STYLE="margin-right: -0.02in; margin-bottom: 0.14in"><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><B>Сроки</B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif">&nbsp;</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><B>проведения</B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif">&nbsp;</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><B>Конкурса</B></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif">:
-с </FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ">10.11.2019
-г. по 10.01.2020 г. </SPAN></FONT></FONT>
+с </FONT></FONT><FONT COLOR="#000000"><FONT FACE="Verdana, serif"><SPAN LANG="kk-KZ"><?php echo $_SESSION['date']?>
+г. по <?php echo $_SESSION['date1']?> г. </SPAN></FONT></FONT>
 </P>
 <P STYLE="margin-left: -0.1in; margin-right: -0.02in; margin-bottom: 0.14in">
 <FONT COLOR="#000000">  <FONT FACE="Verdana, serif"><B>Прием
@@ -752,102 +754,40 @@ KZ936010002109169562</FONT></FONT></P>
 
 
             <div class="cart2" id="ww">
-                <div class="cartItem2">
-                    <div class="c2">
-                        <img src="public/img/1.png" class="imgPost2">
-                        <p class="minip">ВКО г. Риддер, КГКП «Дом школьников» 6 класс</p>
-                    </div>
-                    <div class="f2">
-                        <p class="minipB">Қатысушы / Участник:</p>
-                            <p class="miniName">
-                                Альмамбетова Татьяна Олеговна
-                            </p>    
-                        <p class="minipB">Жетекші / Руководитель:</p>
-                            <p class="miniName">
-                                Альмамбетова Татьяна Олеговна
-                            </p> 
-                    </div>
-                </div>
-                <div class="cartItem2">
-                    <div class="c2">
-                        <img src="public/img/1.png" class="imgPost2">
-                        <p class="minip">ВКО г. Риддер, КГКП «Дом школьников» 6 класс</p>
-                    </div>
-                    <div class="f2">
-                        <p class="minipB">Қатысушы / Участник:</p>
-                            <p class="miniName">
-                                Альмамбетова Татьяна Олеговна
-                            </p>    
-                        <p class="minipB">Жетекші / Руководитель:</p>
-                            <p class="miniName">
-                                Альмамбетова Татьяна Олеговна
-                            </p> 
-                    </div>
-                </div>
-                <div class="cartItem2">
-                    <div class="c2">
-                        <img src="public/img/1.png" class="imgPost2">
-                        <p class="minip">ВКО г. Риддер, КГКП «Дом школьников» 6 класс</p>
-                    </div>
-                    <div class="f2">
-                        <p class="minipB">Қатысушы / Участник:</p>
-                            <p class="miniName">
-                                Альмамбетова Татьяна Олеговна
-                            </p>    
-                        <p class="minipB">Жетекші / Руководитель:</p>
-                            <p class="miniName">
-                                Альмамбетова Татьяна Олеговна
-                            </p> 
-                    </div>
-                </div>
-                <div class="cartItem2">
-                    <div class="c2">
-                        <img src="public/img/1.png" class="imgPost2">
-                        <p class="minip">ВКО г. Риддер, КГКП «Дом школьников» 6 класс</p>
-                    </div>
-                    <div class="f2">
-                        <p class="minipB">Қатысушы / Участник:</p>
-                            <p class="miniName">
-                                Альмамбетова Татьяна Олеговна
-                            </p>    
-                        <p class="minipB">Жетекші / Руководитель:</p>
-                            <p class="miniName">
-                                Альмамбетова Татьяна Олеговна
-                            </p> 
-                    </div>
-                </div>
-                <div class="cartItem2">
-                    <div class="c2">
-                        <img src="public/img/1.png" class="imgPost2">
-                        <p class="minip">ВКО г. Риддер, КГКП «Дом школьников» 6 класс</p>
-                    </div>
-                    <div class="f2">
-                        <p class="minipB">Қатысушы / Участник:</p>
-                            <p class="miniName">
-                                Альмамбетова Татьяна Олеговна
-                            </p>    
-                        <p class="minipB">Жетекші / Руководитель:</p>
-                            <p class="miniName">
-                                Альмамбетова Татьяна Олеговна
-                            </p> 
-                    </div>
-                </div>
-                <div class="cartItem2">
-                    <div class="c2">
-                        <img src="public/img/1.png" class="imgPost2">
-                        <p class="minip">ВКО г. Риддер, КГКП «Дом школьников» 6 класс</p>
-                    </div>
-                    <div class="f2">
-                        <p class="minipB">Қатысушы / Участник:</p>
-                            <p class="miniName">
-                                Альмамбетова Татьяна Олеговна
-                            </p>    
-                        <p class="minipB">Жетекші / Руководитель:</p>
-                            <p class="miniName">
-                                Альмамбетова Татьяна Олеговна
-                            </p> 
-                    </div>
-                </div>
+                    
+            <?php
+
+require_once 'app/pdo/connect.php';
+
+$page = $_SERVER['REQUEST_URI'];
+$page = substr($page, 1, 1);
+
+
+$lol = 'SELECT * FROM `work` WHERE id = "'.$page.'"';
+$rlol = $pdo->query($lol);
+$rlol = $rlol->fetchAll(PDO::FETCH_ASSOC);
+
+foreach($rlol as $k => $v) {
+    echo '<div class="cartItem2">';
+        echo '<div class="c2">';
+            echo '<img src="'.$v['src'].'" class="imgPost2">';
+            echo '<p class="minip">"'.$v['froms'].'"</p>';
+        echo '</div>';
+
+        echo '<div class="f2">';
+        echo '<p class="minipB">Қатысушы / Участник:</p>';
+        echo '<p class="miniName">"'.$v['name'].'"</p>';
+        echo '<p class="minipB">Жетекші / Руководитель:</p>';
+        echo '<p class="miniName">"'.$v['ticher'].'"</p>';
+    echo '</div>';
+
+    echo '</div>';
+}
+
+
+?>
+
+                
             
             </div>
         </div>

@@ -4,9 +4,13 @@
       if(($_POST['login'] == 'admin') && ($_POST['pass'] == 'danishpan!!')) {
           session_start();
           $_SESSION['active'] = 'active';
-          header('Location: panel.php');
+          header('Location: ../panel.php');
       }
   }
+
+  if(!empty($_SESSION['active'])) {
+    header('Location: ../panel.php');
+}
 
 ?>
 <!DOCTYPE html>
