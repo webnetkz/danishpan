@@ -776,13 +776,9 @@ KZ936010002109169562</FONT></FONT></P>
                     
             <?php
 
-require_once 'app/pdo/connect.php';
-
-$page = $_SERVER['REQUEST_URI'];
-$page = substr($page, 1, 1);
 
 
-$lol = 'SELECT * FROM `work` WHERE id = "'.$page.'"';
+$lol = 'SELECT * FROM `work` WHERE cat = "'.$kaz.'"';
 $rlol = $pdo->query($lol);
 $rlol = $rlol->fetchAll(PDO::FETCH_ASSOC);
 

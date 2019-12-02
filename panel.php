@@ -195,7 +195,7 @@
 
             foreach($llb as $k => $v) {
               echo '<option>';
-                echo $v['kaz'] .' / '. $v['ru'];
+                echo $v['kaz'];
               echo '</option>';
             }
           ?>
@@ -232,7 +232,7 @@
       $rr = $rr->fetchAll(PDO::FETCH_ASSOC);
 
       foreach($rr as $k => $v) {
-          echo '<input type="submit" value="'.$v['kaz'].' / '.$v['ru'].'" name="arc"><br><br>';
+          echo '<input type="submit" value="'.$v['kaz'].'" name="arc"><br><br>';
       }
     ?>
 
