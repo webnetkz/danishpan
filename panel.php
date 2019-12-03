@@ -124,8 +124,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>Danishpan Admin</title>
 	<link rel="stylesheet" href="admin/css/style.css">
-	<link rel="icon" href="http://vladmaxi.net/favicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="http://vladmaxi.net/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="public/img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="public/img/favicon.ico" type="image/x-icon">
 	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
@@ -207,11 +207,11 @@
     </p>
     <br>
     <p>
-      <input type="text" name="nameW" placeholder="Имя участника">
+      <input type="text" name="nameW" placeholder="Имя руководителя">
     </p>
     <br>
     <p>
-      <input type="text" name="nameT" placeholder="Имя учителя">
+      <input type="text" name="nameT" placeholder="Имя участника">
     </p>
     <br>
     <p>

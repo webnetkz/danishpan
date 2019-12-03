@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="public/css/mheader.css">
     <link rel="stylesheet" href="public/css/post.css">
     <link rel="stylesheet" href="public/css/headerPs.css">
-    <link rel="icon" href="http://vladmaxi.net/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="public/img/favicon.ico" type="image/x-icon">
     <style>@media only screen and (max-width: 500px) {
   
   .cartItem2 {
