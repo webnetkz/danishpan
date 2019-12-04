@@ -73,6 +73,9 @@ a:hover {
   color: #a8a7a8;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
 }
+textarea {
+  color: rgba(0, 0, 0, 1);
+}
 .login p {
   margin: 0 0 10px;
 }

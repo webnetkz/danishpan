@@ -418,18 +418,17 @@ nav {
     <div class="wrapper">
 
         <header>
-            <h1>
+        <h1>
                 DANISHPAN.KZ
             </h1>
-
+            <p>+7 (705) 588 12 10</p>
+            <p>info@danishpan.kz</p>
             <h3>
                 Республикалық қашықтық байқаулар орталығы 
             </h3>
             <h3>
                 Республиканский центр дистанционных конкурсов
             </h3>
-            <p>+7 (705) 588 12 10</p>
-            <p>info@danishpan.kz</p>
             <menu>
                 <a href="index.php" class="menuItem active">
                     Негізгі бет
@@ -498,7 +497,7 @@ nav {
         </div>
 
         <div class="nomin">
-            <h1 class="Cont">Байқаулар келесі номинациялар бойынша өткізіледі:</h1>
+            <h2 class="Cont" style="margin-bottom: 13px;">Байқаулар келесі номинациялар бойынша өткізіледі:</h2>
             <h2 class="Cont">Конкурсы проводятся по следующим номинациям:</h2>
         
             <div class="workItem">
