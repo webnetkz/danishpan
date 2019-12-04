@@ -34,7 +34,49 @@
     <link rel="icon" href="../public/img/favicon.ico" type="image/x-icon">
 
     
-    <style>@media only screen and (max-width: 500px) {
+    <style>
+    
+    /* картинка на странице */
+.minimized {
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid #FFF;
+}
+ 
+.minimized:hover {
+  border: 1px solid yellow;
+}
+ 
+/* увеличенная картинка */
+#magnify {
+  display: none;
+  left: 0;
+  top: 0;
+  
+  position: fixed;
+  z-index: 9999;
+}
+ 
+#magnify img {
+  width: 150%;
+}
+ 
+/* затемняющий фон */
+#overlay {
+  display: none;
+ 
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  z-index: 9990;
+}
+    
+    
+    @media only screen and (max-width: 500px) {
   
   .cartItem2 {
       width: 94%;
@@ -790,7 +832,7 @@ KZ936010002109169562</FONT></FONT></P>
                     echo '<div class="cartItem2">';
                     
                         echo '<div class="c2">';
-                            echo '<img src="../'.$v['src'].'" class="imgPost2">';
+                            echo '<img src="../'.$v['src'].'" class="minimized imgPost2">';
                             echo '<p class="minip">"'.$v['froms'].'"</p>';
                         echo '</div>';
 
@@ -830,5 +872,33 @@ KZ936010002109169562</FONT></FONT></P>
         </footer>
 
     </div>
+
+
+    <script src="../public/js/jquery.min.js"></script>
+
+
+    <script>
+$(function(){
+  $('.minimized').click(function(event) {
+    var i_path = $(this).attr('src');
+    $('body').append('<div id="overlay"></div><div id="magnify"><img src="'+i_path+'"></div>');
+    $('#magnify').css({
+	    left: ($(document).width() - $('#magnify').outerWidth())/3,
+	    // top: ($(document).height() - $('#magnify').outerHeight())/2 upd: 24.10.2016
+            top: ($(window).height() - $('#magnify').outerHeight())/3
+	  });
+    $('#overlay, #magnify').fadeIn('fast');
+  });
+  
+  $('body').on('click', '#close-popup, #overlay', function(event) {
+    event.preventDefault();
+ 
+    $('#overlay, #magnify').fadeOut('fast', function() {
+      $('#close-popup, #magnify, #overlay').remove();
+    });
+  });
+});
+ 
+</script>
 </body>
 </html>
