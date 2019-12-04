@@ -177,17 +177,3 @@ nav {
 
 
 
-.imgPost2:focus {
-    -webkit-transform: scale(2.5);
-    -moz-transform:  scale(2.5); 
-    -o-transform:  scale(2.5); 
-    -ms-transform:  scale(2.5);
-    transform: scale(2.5);
-}
-.imgPost2:hover {
-    -webkit-transform: scale(2.5);
-    -moz-transform:  scale(2.5); 
-    -o-transform:  scale(2.5); 
-    -ms-transform:  scale(2.5);
-    transform: scale(2.5);
-}

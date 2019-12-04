@@ -32,8 +32,6 @@
     <link rel="stylesheet" href="../public/css/post.css">
     <link rel="stylesheet" href="../public/css/headerPs.css">
     <link rel="icon" href="../public/img/favicon.ico" type="image/x-icon">
-
-    
     <style>@media only screen and (max-width: 500px) {
   
   .cartItem2 {
@@ -306,6 +304,7 @@ nav {
 }
 
 }
+
 
 </style>
     <title><?php echo $kaz?></title>
@@ -779,7 +778,12 @@ KZ936010002109169562</FONT></FONT></P>
 
 
             <div class="cart2" id="ww">
-                    
+
+            <div class="image">
+                <input id="pic01" type="checkbox">
+                <label for="pic01" style="background-image: url('http://lorempixel.com/800/600/sports/1');"></label>
+            </div>
+
             <?php
 
                 $lol = 'SELECT * FROM `work` WHERE cat = "'.$kaz.'"';

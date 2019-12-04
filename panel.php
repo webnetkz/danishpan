@@ -8,37 +8,34 @@
 
     require_once 'app/pdo/connect.php';
 
-    if($_POST['goPeople']) {
+     // Добавление участника на главную страницу
+    if( !empty($_POST['goPeople']) ) {
 
-            $fileName = $_FILES['go']['name'];
-            $fileTmp = $_FILES['go']['tmp_name'];
+      $name = $_POST['name'];
+      $old = $_POST['old'];
+
+      $fileName = $_FILES['go']['name'];
+      $fileTmp = $_FILES['go']['tmp_name'];
          
-             // Директория для размещения файла
-             $destiation_dir = $fileName;
-             // Перемещаем файл в желаемую директорию
-             move_uploaded_file($fileTmp, $destiation_dir );
+       // Директория для размещения файла
+      $destiation_dir = 'public/img/people/'.$fileName;
+      move_uploaded_file($fileTmp, $destiation_dir );
 
-        if(!empty($_POST['name']) && (!empty($_POST['old']))) {
-            $name = $_POST['name'];
-            $old = $_POST['old'];
-
-
-            $sqlApCat = 'INSERT INTO `people` (`name`, `old`, `src`) VALUE("'.$name.'", "'.$old.'", "'.$fileName.'");';
-            $resApCat = $pdo->query($sqlApCat);
-        }
+      $sqlApCat = 'INSERT INTO `people` (`src`, `old`, `name`) VALUE("'.$destiation_dir.'", "'.$old.'", "'.$name.'");';
+      $resApCat = $pdo->query($sqlApCat);
 
     }
+
+     // Добавление новой категории
     if($_POST['goPost']) {
 
       $fileNameg = $_FILES['gog']['name'];
       $fileTmpg = $_FILES['gog']['tmp_name'];
    
-       // Директория для размещения файла
-       $destiation_dirg = $fileNameg;
-       // Перемещаем файл в желаемую директорию
-       move_uploaded_file($fileTmpg, $destiation_dirg );
-
-        if((!empty($_POST['kaz']) && (!empty($_POST['ru'])) && (!empty($_POST['old'])) && (!empty($_POST['text'])) && (!empty($_POST['date'])) && (!empty($_POST['date1'])))) {
+        // Директория для размещения файла
+      $destiation_dirg = 'public/img/post/'.$fileNameg;
+      move_uploaded_file($fileTmpg, $destiation_dirg );
+            
             $kaz = $_POST['kaz'];
             $ru = $_POST['ru'];
             $text = $_POST['text'];
@@ -46,20 +43,13 @@
             $date1 = $_POST['date1'];
             $old = $_POST['old'];
 
-            $_SESSION['kaz'] = $kaz;
-            $_SESSION['ru'] = $ru;
-            $_SESSION['date'] = $date;
-            $_SESSION['date1'] = $date1;
-            $_SESSION['old'] = $old;
-
-            $sqlAp = 'INSERT INTO `post` (`kaz`, `ru`, `text`, `date`, `date1`, `src`, `old`) VALUE("'.$kaz.'", "'.$ru.'", "'.$text.'", "'.$date.'", "'.$date1.'", "'.$fileNameg.'", "'.$old.'");';
-            $sqlAp2 = 'INSERT INTO `archive` (`kaz`, `ru`, `text`, `date`, `date1`, `src`, `old`) VALUE("'.$kaz.'", "'.$ru.'", "'.$text.'", "'.$date.'", "'.$date1.'", "'.$fileNameg.'", "'.$old.'");';
+            $sqlAp = 'INSERT INTO `post` (`kaz`, `ru`, `text`, `date`, `date1`, `src`, `old`) VALUE("'.$kaz.'", "'.$ru.'", "'.$text.'", "'.$date.'", "'.$date1.'", "'.$destiation_dirg.'", "'.$old.'");';
+            $sqlAp2 = 'INSERT INTO `archive` (`kaz`, `ru`, `text`, `date`, `date1`, `src`, `old`) VALUE("'.$kaz.'", "'.$ru.'", "'.$text.'", "'.$date.'", "'.$date1.'", "'.$destiation_dirg.'", "'.$old.'");';
 
             $pdo->query($sqlAp);
             $pdo->query($sqlAp2);
 
-        }
-
+         // Получение id последнего поста
         $s = 'SELECT * FROM `post`';
         $r = $pdo->query($s);
         $r = $r->fetchAll(PDO::FETCH_ASSOC);
@@ -67,15 +57,16 @@
           $vv = $v['id'];
         }
 
-
+         // Файл шаблон для вставки в создаваемый файл
         $com = file_get_contents('postg.php');
 
-    //путь и сам файл
-    $file = $vv++.".php";
-    //если файла нету... тогда
-    if (!file_exists($file)) {
-        $fp = fopen($file, "w"); // ("r" - считывать "w" - создавать "a" - добовлять к тексту),мы создаем файл
+       // Создание файла поста
+      $file = 'post/'.$vv++.".php";
+
+      if(!file_exists($file)) {
+        $fp = fopen($file, "w"); // ("r" - считывать "w" - создавать "a" - добовлять к тексту)
         fwrite($fp, $com);
+
         fclose($fp);
       }
 
@@ -87,9 +78,9 @@
       $fileTmp = $_FILES['gogg']['tmp_name'];
    
        // Директория для размещения файла
-       $destiation_dir = $fileName;
+       $destiation_dir88 = 'public/img/work/'.$fileName;
        // Перемещаем файл в желаемую директорию
-       move_uploaded_file($fileTmp, $destiation_dir );
+       move_uploaded_file($fileTmp, $destiation_dir88 );
 
   if(!empty($_POST['nameW']) && (!empty($_POST['nameT'])) && (!empty($_POST['froms'])) && (!empty($_POST['cat']))) {
       $nameW = $_POST['nameW'];
@@ -98,12 +89,12 @@
       $cats = $_POST['cat'];
 
 
-      $sqlApCatgg = 'INSERT INTO `work` (`froms`, `ticher`, `name`, `src`, `cat`) VALUE("'.$froms.'", "'.$nameW.'", "'.$nameT.'", "'.$fileName.'", "'.$cats.'");';
+      $sqlApCatgg = 'INSERT INTO `work` (`froms`, `ticher`, `name`, `src`, `cat`) VALUE("'.$froms.'", "'.$nameW.'", "'.$nameT.'", "'.$destiation_dir88.'", "'.$cats.'");';
       $resApCatgg = $pdo->query($sqlApCatgg);
   }
 
   }
-
+     // Перенос поста в архив
     if(!empty($_POST['arc'])) {
         $arc = $_POST['arc'];
 
@@ -111,6 +102,40 @@
         $rrr = $pdo->query($sss);
 
     }
+
+      // Удаление поста и всего содержимого
+    if(!empty($_POST['del'])) {
+      $del = $_POST['del'];
+      
+      $allDelSql = 'SELECT * FROM `post` WHERE `kaz` = "'.$del.'"';
+      $resDelAll = $pdo->query($allDelSql);
+      $resDelAll = $resDelAll->fetchAll(PDO::FETCH_ASSOC);
+
+      unlink('post/'.$resDelAll[0]['id'].'.php');
+      unlink($resDelAll[0]['src']);
+
+      $delSql = 'DELETE FROM `post` WHERE `kaz` = "'.$del.'"';
+      $delSql2 = 'DELETE FROM `archive` WHERE `kaz` = "'.$del.'"';
+      $pdo->query($delSql);
+      $pdo->query($delSql2);
+      
+  }
+
+        // Удаление работы
+        if(!empty($_POST['delW'])) {
+          $delW = $_POST['delW'];
+          
+          $allDelSql1 = 'SELECT * FROM `work` WHERE `froms` = "'.$delW.'"';
+          $resDelAll1 = $pdo->query($allDelSql1);
+          $resDelAll1 = $resDelAll1->fetchAll(PDO::FETCH_ASSOC);
+    
+          unlink($resDelAll1[0]['src']);
+    
+          $delSqlW = 'DELETE FROM `work` WHERE `froms` = "'.$delW.'"';
+
+          $pdo->query($delSqlW);
+          
+      }
 
 ?>
 
@@ -135,7 +160,7 @@
     <h1 style="color: white;">Добавить участника</h1>
     <br>
     <p>
-      <input type="text" name="name" id="login" placeholder="Имя">
+      <input type="text" name="name" placeholder="Имя">
     </p>
         <br>
     <p>
@@ -171,8 +196,9 @@
     </p>
     <br>
     <p style="color: white;">
-      Начало: <input type="date" name="date" placeholder="Дата"> - до: <input type="date" name="date1" id="password" placeholder="Дата">
+      Начало: <input type="text"  name="date"  placeholder="Дата начала"> - до: <input type="text" name="date1" placeholder="Дата завершения">
     </p>
+
     <br>
     <p>
       <input type="file" style="color: white;" name="gog" >
@@ -224,7 +250,7 @@
     <br>
     <hr>
     <br>
-    <p style="color: white;">Добавить в архив</p>
+    <p style="color: white;">Добавить в архив конкурс</p>
     <br>
     <?php
       $ss = "SELECT `kaz` FROM `post`";
@@ -235,6 +261,34 @@
           echo '<input type="submit" value="'.$v['kaz'].'" name="arc"><br><br>';
       }
     ?>
+      <hr>
+    <br>
+    <p style="color: white;">Удалить конкурс</p>
+    <br>
+    <?php
+      $ss = "SELECT `kaz` FROM `post`";
+      $rr = $pdo->query($ss);
+      $rr = $rr->fetchAll(PDO::FETCH_ASSOC);
+
+      foreach($rr as $k => $v) {
+          echo '<input type="submit" value="'.$v['kaz'].'" name="del"><br><br>';
+      }
+    ?>
+          <hr>
+    <br>
+    <p style="color: white;">Удалить работу</p>
+    <br>
+    <?php
+      $ss = "SELECT * FROM `work`";
+      $rr = $pdo->query($ss);
+      $rr = $rr->fetchAll(PDO::FETCH_ASSOC);
+
+      foreach($rr as $k => $v) {
+          echo '<input type="submit" value="'.$v['froms'].'" name="delW"><br><br>';
+      }
+    ?>
+
+    
 
   </form>
 </body>

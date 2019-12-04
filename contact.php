@@ -365,7 +365,6 @@ nav {
                 Тел: +7 (705) 588 12 10
             </p>
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2502.04371660888!2d71.45964501564501!3d51.162983443647775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4245813dea66e727%3A0xf7aa8ee233ed9566!2z0YPQuy4g0JrQtdC90LXRgdCw0YDRiyA3NCwg0J3Rg9GALdCh0YPQu9GC0LDQvSAwMTAwMDA!5e0!3m2!1sru!2skz!4v1575037176623!5m2!1sru!2skz" width="80%" height="300" frameborder="0" style="border:0; margin-top: 1.5em; margin-left: 2em;" allowfullscreen=""></iframe>
         </div>
 
         <footer>

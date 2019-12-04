@@ -373,7 +373,7 @@ nav {
 
                 foreach($res as $k => $v) {
 
-                    echo '<a href="'.$v['id'].'.php">';
+                    echo '<a href="post/'.$v['id'].'.php">';
                         echo '<div class="cartItem">';
                             echo '<div class="c">';
                                 echo '<img src="'.$v['src'].'" class="imgPost" style="width: 100%;">';

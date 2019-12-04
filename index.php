@@ -416,9 +416,7 @@ nav {
     </nav>
   
     <div class="wrapper">
-        <a href="admin.php" class="sign">
-            Войти
-        </a>
+
         <header>
             <h1>
                 DANISHPAN.KZ
@@ -518,6 +516,7 @@ nav {
         <div class="slider">
     <div class="slider__wrapper">
       <?php
+      
         require_once 'app/pdo/connect.php';
 
         $sql = 'SELECT * FROM `people`';
@@ -535,34 +534,6 @@ nav {
         }
       
       ?>
-      <div class="slider__item">
-        <div style="">
-            <img src="public/img/people/1.png" style="width: 80%;">
-        </div>
-        <p class="name">Андрей Симонов</p>
-        <p class="old">12 лет</p>
-      </div>
-      <div class="slider__item">
-        <div style="">
-            <img src="public/img/people/1.png" style="width: 80%;">
-        </div>
-        <p class="name">Андрей Симонов</p>
-        <p class="old">12 лет</p>
-      </div>
-      <div class="slider__item">
-        <div style="">
-            <img src="public/img/people/1.png" style="width: 80%;">
-        </div>
-        <p class="name">Андрей Симонов</p>
-        <p class="old">12 лет</p>
-      </div>
-      <div class="slider__item">
-        <div style="">
-            <img src="public/img/people/1.png" style="width: 80%;">
-        </div>
-        <p class="name">Андрей Симонов</p>
-        <p class="old">12 лет</p>
-      </div>
       <div class="slider__item">
         <div style="">
             <img src="public/img/people/1.png" style="width: 80%;">
