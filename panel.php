@@ -45,10 +45,8 @@
             $content = $_POST['content'];
 
             $sqlAp = 'INSERT INTO `post` (`kaz`, `ru`, `text`, `date`, `date1`, `src`, `old`, `content`) VALUE("'.$kaz.'", "'.$ru.'", "'.$text.'", "'.$date.'", "'.$date1.'", "'.$destiation_dirg.'", "'.$old.'", "'.$content.'");';
-            $sqlAp2 = 'INSERT INTO `archive` (`kaz`, `ru`, `text`, `date`, `date1`, `src`, `old`) VALUE("'.$kaz.'", "'.$ru.'", "'.$text.'", "'.$date.'", "'.$date1.'", "'.$destiation_dirg.'", "'.$old.'");';
 
             $pdo->query($sqlAp);
-            $pdo->query($sqlAp2);
 
          // Получение id последнего поста
         $s = 'SELECT * FROM `post`';
@@ -99,9 +97,16 @@
     if(!empty($_POST['arc'])) {
         $arc = $_POST['arc'];
 
+        $getSqlArc = 'SELECT * FROM `post` WHERE `kaz` = "'.$arc.'"';
+        $resGetArc = $pdo->query($getSqlArc);
+        $resGetArc = $resGetArc->fetch(PDO::FETCH_ASSOC);
+        
+        
+        $sqlAp2 = 'INSERT INTO `archive` (`kaz`, `ru`, `text`, `date`, `date1`, `src`, `old`) VALUE("'.$resGetArc['kaz'].'", "'.$resGetArc['ru'].'", "'.$resGetArc['text'].'", "'.$resGetArc['date'].'", "'.$resGetArc['date1'].'", "'.$resGetArc['src'].'", "'.$resGetArc['old'].'");';
+        $pdo->query($sqlAp2);
+        
         $sss = 'DELETE FROM `post` WHERE `kaz` = "'.$arc.'"';
-        $rrr = $pdo->query($sss);
-
+        $pdo->query($sss);
     }
 
       // Удаление поста и всего содержимого
